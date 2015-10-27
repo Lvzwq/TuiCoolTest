@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB640DC91BDF4B35003BAFD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DC81BDF4B35003BAFD1 /* main.m */; };
+		AB640DCC1BDF4B35003BAFD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DCB1BDF4B35003BAFD1 /* AppDelegate.m */; };
+		AB640DCF1BDF4B35003BAFD1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DCE1BDF4B35003BAFD1 /* FirstViewController.m */; };
+		AB640DD21BDF4B35003BAFD1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DD11BDF4B35003BAFD1 /* SecondViewController.m */; };
+		AB640DD51BDF4B35003BAFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB640DD31BDF4B35003BAFD1 /* Main.storyboard */; };
+		AB640DD71BDF4B35003BAFD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB640DD61BDF4B35003BAFD1 /* Assets.xcassets */; };
+		AB640DDA1BDF4B35003BAFD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB640DD81BDF4B35003BAFD1 /* LaunchScreen.storyboard */; };
+		AB640DE51BDF4B35003BAFD1 /* TuicoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DE41BDF4B35003BAFD1 /* TuicoolTests.m */; };
+		AB640DF01BDF4B35003BAFD1 /* TuicoolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DEF1BDF4B35003BAFD1 /* TuicoolUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB640DE11BDF4B35003BAFD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB640DBC1BDF4B35003BAFD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB640DC31BDF4B35003BAFD1;
+			remoteInfo = Tuicool;
+		};
+		AB640DEC1BDF4B35003BAFD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB640DBC1BDF4B35003BAFD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB640DC31BDF4B35003BAFD1;
+			remoteInfo = Tuicool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB640DC41BDF4B35003BAFD1 /* Tuicool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuicool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB640DC81BDF4B35003BAFD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB640DCA1BDF4B35003BAFD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB640DCB1BDF4B35003BAFD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB640DCD1BDF4B35003BAFD1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		AB640DCE1BDF4B35003BAFD1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AB640DD01BDF4B35003BAFD1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		AB640DD11BDF4B35003BAFD1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		AB640DD41BDF4B35003BAFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB640DD61BDF4B35003BAFD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB640DD91BDF4B35003BAFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB640DDB1BDF4B35003BAFD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB640DE01BDF4B35003BAFD1 /* TuicoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuicoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB640DE41BDF4B35003BAFD1 /* TuicoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuicoolTests.m; sourceTree = "<group>"; };
+		AB640DE61BDF4B35003BAFD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB640DEB1BDF4B35003BAFD1 /* TuicoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuicoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB640DEF1BDF4B35003BAFD1 /* TuicoolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuicoolUITests.m; sourceTree = "<group>"; };
+		AB640DF11BDF4B35003BAFD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB640DC11BDF4B35003BAFD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB640DDD1BDF4B35003BAFD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB640DE81BDF4B35003BAFD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB640DBB1BDF4B35003BAFD1 = {
+			isa = PBXGroup;
+			children = (
+				AB640DC61BDF4B35003BAFD1 /* Tuicool */,
+				AB640DE31BDF4B35003BAFD1 /* TuicoolTests */,
+				AB640DEE1BDF4B35003BAFD1 /* TuicoolUITests */,
+				AB640DC51BDF4B35003BAFD1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB640DC51BDF4B35003BAFD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB640DC41BDF4B35003BAFD1 /* Tuicool.app */,
+				AB640DE01BDF4B35003BAFD1 /* TuicoolTests.xctest */,
+				AB640DEB1BDF4B35003BAFD1 /* TuicoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB640DC61BDF4B35003BAFD1 /* Tuicool */ = {
+			isa = PBXGroup;
+			children = (
+				AB640DCA1BDF4B35003BAFD1 /* AppDelegate.h */,
+				AB640DCB1BDF4B35003BAFD1 /* AppDelegate.m */,
+				AB640DCD1BDF4B35003BAFD1 /* FirstViewController.h */,
+				AB640DCE1BDF4B35003BAFD1 /* FirstViewController.m */,
+				AB640DD01BDF4B35003BAFD1 /* SecondViewController.h */,
+				AB640DD11BDF4B35003BAFD1 /* SecondViewController.m */,
+				AB640DD31BDF4B35003BAFD1 /* Main.storyboard */,
+				AB640DD61BDF4B35003BAFD1 /* Assets.xcassets */,
+				AB640DD81BDF4B35003BAFD1 /* LaunchScreen.storyboard */,
+				AB640DDB1BDF4B35003BAFD1 /* Info.plist */,
+				AB640DC71BDF4B35003BAFD1 /* Supporting Files */,
+			);
+			path = Tuicool;
+			sourceTree = "<group>";
+		};
+		AB640DC71BDF4B35003BAFD1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB640DC81BDF4B35003BAFD1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB640DE31BDF4B35003BAFD1 /* TuicoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB640DE41BDF4B35003BAFD1 /* TuicoolTests.m */,
+				AB640DE61BDF4B35003BAFD1 /* Info.plist */,
+			);
+			path = TuicoolTests;
+			sourceTree = "<group>";
+		};
+		AB640DEE1BDF4B35003BAFD1 /* TuicoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB640DEF1BDF4B35003BAFD1 /* TuicoolUITests.m */,
+				AB640DF11BDF4B35003BAFD1 /* Info.plist */,
+			);
+			path = TuicoolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB640DC31BDF4B35003BAFD1 /* Tuicool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB640DF41BDF4B35003BAFD1 /* Build configuration list for PBXNativeTarget "Tuicool" */;
+			buildPhases = (
+				AB640DC01BDF4B35003BAFD1 /* Sources */,
+				AB640DC11BDF4B35003BAFD1 /* Frameworks */,
+				AB640DC21BDF4B35003BAFD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tuicool;
+			productName = Tuicool;
+			productReference = AB640DC41BDF4B35003BAFD1 /* Tuicool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB640DDF1BDF4B35003BAFD1 /* TuicoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB640DF71BDF4B35003BAFD1 /* Build configuration list for PBXNativeTarget "TuicoolTests" */;
+			buildPhases = (
+				AB640DDC1BDF4B35003BAFD1 /* Sources */,
+				AB640DDD1BDF4B35003BAFD1 /* Frameworks */,
+				AB640DDE1BDF4B35003BAFD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB640DE21BDF4B35003BAFD1 /* PBXTargetDependency */,
+			);
+			name = TuicoolTests;
+			productName = TuicoolTests;
+			productReference = AB640DE01BDF4B35003BAFD1 /* TuicoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB640DEA1BDF4B35003BAFD1 /* TuicoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB640DFA1BDF4B35003BAFD1 /* Build configuration list for PBXNativeTarget "TuicoolUITests" */;
+			buildPhases = (
+				AB640DE71BDF4B35003BAFD1 /* Sources */,
+				AB640DE81BDF4B35003BAFD1 /* Frameworks */,
+				AB640DE91BDF4B35003BAFD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB640DED1BDF4B35003BAFD1 /* PBXTargetDependency */,
+			);
+			name = TuicoolUITests;
+			productName = TuicoolUITests;
+			productReference = AB640DEB1BDF4B35003BAFD1 /* TuicoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB640DBC1BDF4B35003BAFD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zwenqiang;
+				TargetAttributes = {
+					AB640DC31BDF4B35003BAFD1 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = A8N6ZF8EEJ;
+					};
+					AB640DDF1BDF4B35003BAFD1 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = A8N6ZF8EEJ;
+						TestTargetID = AB640DC31BDF4B35003BAFD1;
+					};
+					AB640DEA1BDF4B35003BAFD1 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = A8N6ZF8EEJ;
+						TestTargetID = AB640DC31BDF4B35003BAFD1;
+					};
+				};
+			};
+			buildConfigurationList = AB640DBF1BDF4B35003BAFD1 /* Build configuration list for PBXProject "Tuicool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB640DBB1BDF4B35003BAFD1;
+			productRefGroup = AB640DC51BDF4B35003BAFD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB640DC31BDF4B35003BAFD1 /* Tuicool */,
+				AB640DDF1BDF4B35003BAFD1 /* TuicoolTests */,
+				AB640DEA1BDF4B35003BAFD1 /* TuicoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB640DC21BDF4B35003BAFD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB640DDA1BDF4B35003BAFD1 /* LaunchScreen.storyboard in Resources */,
+				AB640DD71BDF4B35003BAFD1 /* Assets.xcassets in Resources */,
+				AB640DD51BDF4B35003BAFD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB640DDE1BDF4B35003BAFD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB640DE91BDF4B35003BAFD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB640DC01BDF4B35003BAFD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB640DD21BDF4B35003BAFD1 /* SecondViewController.m in Sources */,
+				AB640DCC1BDF4B35003BAFD1 /* AppDelegate.m in Sources */,
+				AB640DCF1BDF4B35003BAFD1 /* FirstViewController.m in Sources */,
+				AB640DC91BDF4B35003BAFD1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB640DDC1BDF4B35003BAFD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB640DE51BDF4B35003BAFD1 /* TuicoolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB640DE71BDF4B35003BAFD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB640DF01BDF4B35003BAFD1 /* TuicoolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB640DE21BDF4B35003BAFD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB640DC31BDF4B35003BAFD1 /* Tuicool */;
+			targetProxy = AB640DE11BDF4B35003BAFD1 /* PBXContainerItemProxy */;
+		};
+		AB640DED1BDF4B35003BAFD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB640DC31BDF4B35003BAFD1 /* Tuicool */;
+			targetProxy = AB640DEC1BDF4B35003BAFD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB640DD31BDF4B35003BAFD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB640DD41BDF4B35003BAFD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB640DD81BDF4B35003BAFD1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB640DD91BDF4B35003BAFD1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB640DF21BDF4B35003BAFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AB640DF31BDF4B35003BAFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB640DF51BDF4B35003BAFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tuicool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingyan.Tuicool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AB640DF61BDF4B35003BAFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tuicool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingyan.Tuicool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AB640DF81BDF4B35003BAFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TuicoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingyan.TuicoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tuicool.app/Tuicool";
+			};
+			name = Debug;
+		};
+		AB640DF91BDF4B35003BAFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TuicoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingyan.TuicoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tuicool.app/Tuicool";
+			};
+			name = Release;
+		};
+		AB640DFB1BDF4B35003BAFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TuicoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingyan.TuicoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tuicool;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AB640DFC1BDF4B35003BAFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TuicoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingyan.TuicoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tuicool;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB640DBF1BDF4B35003BAFD1 /* Build configuration list for PBXProject "Tuicool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB640DF21BDF4B35003BAFD1 /* Debug */,
+				AB640DF31BDF4B35003BAFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB640DF41BDF4B35003BAFD1 /* Build configuration list for PBXNativeTarget "Tuicool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB640DF51BDF4B35003BAFD1 /* Debug */,
+				AB640DF61BDF4B35003BAFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB640DF71BDF4B35003BAFD1 /* Build configuration list for PBXNativeTarget "TuicoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB640DF81BDF4B35003BAFD1 /* Debug */,
+				AB640DF91BDF4B35003BAFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB640DFA1BDF4B35003BAFD1 /* Build configuration list for PBXNativeTarget "TuicoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB640DFB1BDF4B35003BAFD1 /* Debug */,
+				AB640DFC1BDF4B35003BAFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB640DBC1BDF4B35003BAFD1 /* Project object */;
+}
