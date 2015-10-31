@@ -88,6 +88,8 @@
 		ABDEF7631BE479F30059965B /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDEF7591BE479F30059965B /* UIProgressView+AFNetworking.m */; };
 		ABDEF7641BE479F30059965B /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDEF75B1BE479F30059965B /* UIRefreshControl+AFNetworking.m */; };
 		ABDEF7651BE479F30059965B /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDEF75D1BE479F30059965B /* UIWebView+AFNetworking.m */; };
+		ABDEF7691BE47E3E0059965B /* Left.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDEF7681BE47E3E0059965B /* Left.png */; };
+		ABDEF76F1BE4E2FC0059965B /* TCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDEF76E1BE4E2FC0059965B /* TCImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +252,9 @@
 		ABDEF75B1BE479F30059965B /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		ABDEF75C1BE479F30059965B /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		ABDEF75D1BE479F30059965B /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		ABDEF7681BE47E3E0059965B /* Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Left.png; sourceTree = "<group>"; };
+		ABDEF76D1BE4E2FC0059965B /* TCImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCImageView.h; sourceTree = "<group>"; };
+		ABDEF76E1BE4E2FC0059965B /* TCImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCImageView.m; sourceTree = "<group>"; };
 		D49EC315020BF1AE57E4CF1C /* libPods-Tuicool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tuicool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFCBB0297BBBDBB8F978518 /* Pods-Tuicool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tuicool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tuicool/Pods-Tuicool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,6 +296,7 @@
 		AB1CCF7B1BE3CED000F1D80C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				ABDEF7681BE47E3E0059965B /* Left.png */,
 				AB1CD0081BE3DA9D00F1D80C /* back-25.png */,
 				AB1CD0091BE3DA9D00F1D80C /* left_filled-25.png */,
 				AB1CD00A1BE3DA9D00F1D80C /* left-25.png */,
@@ -416,6 +422,8 @@
 				AB1CCF4A1BE36A2500F1D80C /* DetailArticleView.m */,
 				AB1CCF531BE3B57F00F1D80C /* FlexibleIndicatorView.h */,
 				AB1CCF541BE3B57F00F1D80C /* FlexibleIndicatorView.m */,
+				ABDEF76D1BE4E2FC0059965B /* TCImageView.h */,
+				ABDEF76E1BE4E2FC0059965B /* TCImageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -742,6 +750,7 @@
 				AB1CCFF71BE3D46100F1D80C /* Home_1.png in Resources */,
 				AB1CD00D1BE3DA9D00F1D80C /* left_filled-25.png in Resources */,
 				AB1CD0011BE3D46100F1D80C /* Star.png in Resources */,
+				ABDEF7691BE47E3E0059965B /* Left.png in Resources */,
 				AB1CD0051BE3D46100F1D80C /* Trash.png in Resources */,
 				AB1CD0021BE3D46100F1D80C /* Sun.png in Resources */,
 				AB1CCFFC1BE3D46100F1D80C /* Search.png in Resources */,
@@ -815,6 +824,7 @@
 				AB698D061BE28625001AC391 /* SettingLoginCell.m in Sources */,
 				ABDEF7391BE479E70059965B /* MJRefreshBackFooter.m in Sources */,
 				AB1CCF4B1BE36A2500F1D80C /* DetailArticleView.m in Sources */,
+				ABDEF76F1BE4E2FC0059965B /* TCImageView.m in Sources */,
 				AB640E001BDF649D003BAFD1 /* ThemeViewController.m in Sources */,
 				ABDEF7471BE479E70059965B /* MJRefreshConst.m in Sources */,
 				ABDEF7611BE479F30059965B /* UIButton+AFNetworking.m in Sources */,

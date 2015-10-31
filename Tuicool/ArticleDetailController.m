@@ -18,7 +18,7 @@
 
 @property(nonatomic, strong) FlexibleIndicatorView *indicatorView;
 
-@property(nonatomic, strong) UIToolbar *toolBar;
+
 @end
 
 @implementation ArticleDetailController
@@ -28,12 +28,13 @@
     [super viewDidLoad];
     NSLog(@"进入到viewDidLoad");
     self.view.backgroundColor = [UIColor whiteColor];
-    self.detailArticle = [[DetailArticleView alloc] initWithFrame:CGRectMake(0, 20, DeviceWidth, DeviceHeight)];
-    
+    self.detailArticle = [[DetailArticleView alloc] initWithFrame:CGRectMake(0, 20, DeviceWidth, DeviceHeight - 20)];
+    self.detailArticle.vc = self;
     [self.detailArticle initWithTitle:_newsModel.title
                             feedTitle:_newsModel.feed_title
                               time:_newsModel.time];
     [self.view addSubview:self.detailArticle];
+    
     //添加手势
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(dismissController)];
     swipe.direction = UISwipeGestureRecognizerDirectionRight;
@@ -43,11 +44,8 @@
     self.indicatorView = [[FlexibleIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.indicatorView];
     
-    
-    
     //加载文章内容
     [self loadArticle];
-    [self addToolBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,7 +74,6 @@
     [self.indicatorView show];
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self.detailArticle viewWithContent:(NSDictionary *)responseObject];
-        NSLog(@"JSON: %@", responseObject);
         [self.indicatorView removeFromSuperview];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -85,72 +82,8 @@
     
 }
 
-- (void)addToolBar{
-    self.toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, DeviceHeight - 40, DeviceWidth, 40.0f)];
-    UIImage *back = [UIImage imageNamed:@"left_filled-25"];
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithImage:back
-                                                              style:UIBarButtonItemStyleBordered
-                                                             target:self
-                                                             action:@selector(dismissController)];
-    item1.tintColor = [UIColor greenColor];
-    
-    UIImage *star = [UIImage imageNamed:@"Star"];
-    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:star
-                                                              style:UIBarButtonItemStylePlain
-                                                             target:self
-                                                             action:@selector(starArticle)];
-    item2.tintColor = [UIColor greenColor];
-    
-    UIImage *share = [UIImage imageNamed:@"Share"];
-    UIBarButtonItem *item3 = [[UIBarButtonItem alloc] initWithImage:share
-                                                              style:UIBarButtonItemStylePlain
-                                                             target:self
-                                                             action:@selector(shareArticle)];
-    item3.tintColor = [UIColor greenColor];
-    
-    UIImage *comment = [UIImage imageNamed:@"Bubble"];
-    UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithImage:comment
-                                                              style:UIBarButtonItemStylePlain
-                                                             target:self
-                                                             action:@selector(commentArticle)];
-    item4.tintColor = [UIColor greenColor];
-    
-    UIImage *more = [UIImage imageNamed:@"Star"];
-    UIBarButtonItem *item5 = [[UIBarButtonItem alloc] initWithImage:more
-                                                                  style:UIBarButtonItemStylePlain
-                                                                 target:self
-                                                                 action:@selector(more)];
-    item5.tintColor = [UIColor greenColor];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]
-                              initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                              target:nil
-                              action:nil];
-    
-
-    [self.toolBar setItems:[NSArray arrayWithObjects:item1, item, item2, item, item3, item, item4, item, item5, nil]];
-    [self.view addSubview:self.toolBar];
-}
-
 - (void)dismissController{
-    NSLog(@"返回");
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)starArticle{
-    NSLog(@"收藏");
-}
-
-- (void)shareArticle{
-    
-}
-
-- (void)commentArticle{
-    
-}
-
-- (void)more{
-    
 }
 
 

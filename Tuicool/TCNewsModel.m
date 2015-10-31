@@ -7,6 +7,7 @@
 //
 
 #import "TCNewsModel.h"
+#import<objc/runtime.h>
 
 @implementation TCNewsModel
 
@@ -14,5 +15,20 @@
     TCNewsModel *newsModel = [[self alloc] init];
     [newsModel setValuesForKeysWithDictionary:dict];
     return newsModel;
+}
+
+//获得所有的属性名
++ (NSArray*)propertyList{
+    unsigned int outCount, i;
+    
+    NSMutableArray* array = [NSMutableArray arrayWithCapacity:0];
+    
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    
+    for(i = 0; i < outCount; i++) {
+        [array addObject:[NSString stringWithCString:property_getName(properties[i]) encoding:NSUTF8StringEncoding]];
+    }
+    
+    return array;
 }
 @end

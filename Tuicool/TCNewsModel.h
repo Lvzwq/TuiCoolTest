@@ -54,4 +54,6 @@
 
 
 + (instancetype)newsModelWithDict:(NSDictionary *)dict;
+
++ (NSArray *)propertyList;
 @end

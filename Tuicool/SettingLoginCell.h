@@ -19,3 +19,5 @@
  */
 @property(nonatomic, retain) UILabel *nickName;
 @end
+
+

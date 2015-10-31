@@ -1,4 +1,15 @@
 .alignCenter{
-    width: 100px;
-    height: 100px;
+    
 }
+
+.prettyprint{
+    font-size: 12px;
+    background-color: yellow;
+}
+
+code{
+    font-size: 12px;
+    background-color: yellow;
+}
+
+ 

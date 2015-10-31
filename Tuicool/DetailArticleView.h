@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ArticleModel.h"
 
+
 @interface DetailArticleView : UIView
 
 @property(nonatomic, retain) ArticleModel *articleModel;
+
+@property(nonatomic, retain) UIViewController *vc;
 
 - (void) initWithTitle:(NSString *)title feedTitle:(NSString *)feedTitle time:(NSString *)time;
 

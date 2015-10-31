@@ -36,5 +36,6 @@
  */
 @property(nonatomic, retain) NSArray *images;
 
++ (instancetype)modelWithDict:(NSDictionary *)dict;
 
 @end
