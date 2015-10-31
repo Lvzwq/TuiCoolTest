@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ArticleViewController.h"
+#import "SiteViewController.h"
+#import "ThemeViewController.h"
+#import "SettingsViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,50 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIBarButtonItem *barItem = [UIBarButtonItem appearance];
+    //去掉返回按钮上的字
+    [barItem setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                    forBarMetrics:UIBarMetricsDefault];
+    //把按钮设置为白色
+    barItem.tintColor = [UIColor whiteColor];
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    //设置导航栏标题颜色
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    UIColor *barColor = [UIColor colorWithRed:0.0f green:205/255.0f blue:144/255.0f alpha:1.0f];
+    //设置导航栏背景色
+    [navBar setBarTintColor:barColor];
+    navBar.tintColor = [UIColor whiteColor];//设置导航栏返回按钮颜色
+    
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    //添加tab导航
+    UITabBarController *myTabBarViewController = [[UITabBarController alloc] init];
+    //创建4个tab
+    ArticleViewController *articleViewController = [[ArticleViewController alloc] init];
+    UIImage *articleImage = [UIImage imageNamed:@"Home"];
+    articleViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"文章" image:articleImage tag:0];
+    
+    SiteViewController *siteViewController = [[SiteViewController alloc] init];
+    UIImage *siteImage = [UIImage imageNamed:@"University"];
+    siteViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"站点" image:siteImage tag:1];
+    
+    ThemeViewController *themeViewController = [[ThemeViewController alloc] init];
+    UIImage *theme = [UIImage imageNamed:@"Idea"];
+    themeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主题" image:theme tag:2];
+    
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+    UIImage *userImage = [UIImage imageNamed:@"User"];
+    settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:userImage tag:3];
+    
+    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteViewController, themeViewController, settingsViewController, nil];
+    myTabBarViewController.viewControllers = controllers;
+    [self.window setRootViewController:myTabBarViewController];
+    
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

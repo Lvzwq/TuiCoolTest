@@ -1,23 +1,24 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  Tuicool
 //
 //  Created by zwenqiang on 15/10/27.
 //  Copyright © 2015年 zwenqiang. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "SiteViewController.h"
 
-@interface FirstViewController ()
+@interface SiteViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation SiteViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+  
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

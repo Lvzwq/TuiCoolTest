@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ThemeViewController.h
 //  Tuicool
 //
 //  Created by zwenqiang on 15/10/27.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface ThemeViewController : UIViewController
 
 @end
-
