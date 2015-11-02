@@ -46,9 +46,11 @@
     UIImage *articleImage = [UIImage imageNamed:@"Home"];
     articleViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"文章" image:articleImage tag:0];
     
+    //在TabBarController中使用UINavgationController
     SiteViewController *siteViewController = [[SiteViewController alloc] init];
     UIImage *siteImage = [UIImage imageNamed:@"University"];
     siteViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"站点" image:siteImage tag:1];
+    UINavigationController *siteRoot = [[UINavigationController alloc] initWithRootViewController:siteViewController];
     
     ThemeViewController *themeViewController = [[ThemeViewController alloc] init];
     UIImage *theme = [UIImage imageNamed:@"Idea"];
@@ -58,7 +60,9 @@
     UIImage *userImage = [UIImage imageNamed:@"User"];
     settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:userImage tag:3];
     
-    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteViewController, themeViewController, settingsViewController, nil];
+    
+    
+    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteRoot, themeViewController, settingsViewController, nil];
     myTabBarViewController.viewControllers = controllers;
     [self.window setRootViewController:myTabBarViewController];
     

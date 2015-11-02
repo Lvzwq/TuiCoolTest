@@ -37,7 +37,6 @@
         self.nickName.numberOfLines = 1;
         self.nickName.font = [UIFont systemFontOfSize:16.0f];
         [self addSubview:self.nickName];
-        
     }
     return self;
 }

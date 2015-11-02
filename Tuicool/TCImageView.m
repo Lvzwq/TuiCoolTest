@@ -8,6 +8,7 @@
 
 #import "TCImageView.h"
 #import "Constants.h"
+#import "UIImageView+WebCache.h"
 
 @interface TCImageView ()
 
@@ -65,6 +66,7 @@
     self.navBar.topItem.title = [NSString stringWithFormat:@"%d/%d", (int)(self.imageIndex + 1), count];
 }
 
+#pragma mark -- 滑动手势切换图片
 - (void)changeImage:(UISwipeGestureRecognizer *)gesture{
     NSUInteger count = [self.imageInfo count];
     NSLog(@"count = %lu", (unsigned long)count);
@@ -87,6 +89,7 @@
     }
 }
 
+#pragma mark 重新载入图片
 - (void)reloadImage: (NSUInteger) index{
     NSDictionary *currentImage = [self.imageInfo objectAtIndex:self.imageIndex];
     NSString *imageURLString = [currentImage objectForKey:@"src"];
@@ -120,10 +123,7 @@
 }
 
 - (void)removeView{
-    
     [self removeFromSuperview];
-
-    
 }
 
 
