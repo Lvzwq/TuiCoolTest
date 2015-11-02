@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "BaseArticleController.h"
 #import "SitesViewCell.h"
+#import "SubscribeViewController.h"
 
 @interface SiteViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
@@ -44,10 +45,9 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"default_sites" ofType:@"plist"];
     NSArray *sitesArray = [[NSArray alloc] initWithContentsOfFile:path];
     self.listData = [NSMutableArray arrayWithArray:sitesArray];
-    NSLog(@"self.listData = %@", self.listData);
 }
 
-#pragma mark --UITableView DataSource
+#pragma mark --UITableView DataSource Delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
@@ -61,7 +61,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     if (indexPath.section == 0) {
         static NSString *cellIdentify = @"DefaultSitesCell";
         SitesViewCell  *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
@@ -70,12 +69,10 @@
         }
         NSInteger row = indexPath.row;
         NSDictionary *sites = [self.listData objectAtIndex:row];
-        
         cell.title.text = [sites objectForKey:@"name"];
-        cell.num = 30;
+        [cell addWithNum:30];
         [cell.thumbnail sd_setImageWithURL:[NSURL URLWithString:[sites objectForKey:@"image"]]
                   placeholderImage:[UIImage imageNamed:@"placeholder_icon.png"]];
-        
         return cell;
     }else {
         static NSString *addedCellIdentify = @"AddedSitesCell";
@@ -106,6 +103,9 @@
         [self.navigationController pushViewController:baseArticleController animated:YES];
     }else{
         NSLog(@"添加更多主题");
+        SubscribeViewController *subViewController = [[SubscribeViewController alloc] init];
+        subViewController.navigationItem.title = @"订阅站点";
+        [self.navigationController pushViewController:subViewController animated:YES];
     }
 }
 

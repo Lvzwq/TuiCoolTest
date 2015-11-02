@@ -55,14 +55,13 @@
     ThemeViewController *themeViewController = [[ThemeViewController alloc] init];
     UIImage *theme = [UIImage imageNamed:@"Idea"];
     themeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主题" image:theme tag:2];
+    UINavigationController *themeRoot = [[UINavigationController alloc] initWithRootViewController:themeViewController];
     
     SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
     UIImage *userImage = [UIImage imageNamed:@"User"];
     settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:userImage tag:3];
     
-    
-    
-    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteRoot, themeViewController, settingsViewController, nil];
+    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteRoot, themeRoot, settingsViewController, nil];
     myTabBarViewController.viewControllers = controllers;
     [self.window setRootViewController:myTabBarViewController];
     

@@ -22,13 +22,12 @@
 @property(nonatomic, strong) UIImageView *thumbnail;
 
 /**
- * 目前新的文章数
- */
-@property(nonatomic, assign) int num;
-
-/**
  * 高度
  */
 @property(nonatomic, assign) CGFloat rowHeight;
+
+- (void) addWithNum:(int)num;
+
+- (void) addWithImage:(UIImage *)image;
 
 @end

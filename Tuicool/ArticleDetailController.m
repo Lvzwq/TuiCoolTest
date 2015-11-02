@@ -54,7 +54,7 @@
 }
 
 - (void)loadArticle{
-    // http://api.tuicool.com/api/articles/RBrmiqj.json?need_image_meta=1
+    
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
     }];
