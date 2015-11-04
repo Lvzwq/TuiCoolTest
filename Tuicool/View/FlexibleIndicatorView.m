@@ -14,6 +14,7 @@
 @end
 @implementation FlexibleIndicatorView
 
+
 - (id) initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyle)style{
     self = [super init];
     if (self) {

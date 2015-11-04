@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import "ArticleDetailController.h"
 
+//获取缓存图片的路径
 #define CacheImagePath(url) [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:[url lastPathComponent]]
 
 
@@ -35,7 +36,7 @@
 /**
  *  存放所有下载完成的图片，用于缓存
  */
-@property (nonatomic,strong) NSMutableDictionary* images;
+@property (nonatomic,strong) NSMutableDictionary *images;
 
 
 /**
@@ -95,13 +96,11 @@
 
 
 - (void) loadData{
-    
     [self loadDataWithType:1 withParameter:self.parameters];
     [self.tableView.header endRefreshing];
 }
 
 - (void)loadMoreData{
-    NSLog(@"load more Data");
     TCNewsModel *model = [TCNewsModel newsModelWithDict:[self.listData lastObject]];
     NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:self.parameters];
     [param setObject:@"pn" forKey:[[NSNumber alloc] initWithInt:self.pn + 1]];
@@ -117,6 +116,17 @@
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
     [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         NSLog(@"%ld",(long)status);
+        switch (status) {
+            case 1:
+            case 2:
+                //网络状态良好
+                NSLog(@"当前网络状态良好");
+                break;
+            default:
+                NSLog(@"网络出现问题");
+                
+                break;
+        }
     }];
     [mgr startMonitoring];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

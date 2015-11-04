@@ -7,7 +7,6 @@
 //
 
 #import "SitesViewCell.h"
-#import "Constants.h"
 @interface SitesViewCell()
 
 @property(nonatomic, strong) UIView *rightView;

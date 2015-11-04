@@ -7,7 +7,6 @@
 //
 
 #import "SiteViewController.h"
-#import "Constants.h"
 #import "UIImageView+WebCache.h"
 #import "BaseArticleController.h"
 #import "SitesViewCell.h"

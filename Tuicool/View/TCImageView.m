@@ -7,7 +7,6 @@
 //
 
 #import "TCImageView.h"
-#import "Constants.h"
 #import "UIImageView+WebCache.h"
 
 @interface TCImageView ()

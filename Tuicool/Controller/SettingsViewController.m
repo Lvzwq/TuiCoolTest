@@ -8,7 +8,6 @@
 
 #import "SettingsViewController.h"
 #import "SettingLoginCell.h"
-#import "Constants.h"
 
 
 

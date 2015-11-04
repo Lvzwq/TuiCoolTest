@@ -8,7 +8,6 @@
 
 #import "ArticleViewController.h"
 #import "BaseArticleController.h"
-#import "Constants.h"
 
 @interface ArticleViewController () <UIScrollViewDelegate>
 @property(nonatomic, retain) UIScrollView *titleBarScollView;

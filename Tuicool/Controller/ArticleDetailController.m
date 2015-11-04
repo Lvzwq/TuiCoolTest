@@ -9,7 +9,6 @@
 #import "ArticleDetailController.h"
 #import "DetailArticleView.h"
 #import "FlexibleIndicatorView.h"
-#import "Constants.h"
 #import "AFNetworking.h"
 
 @interface ArticleDetailController ()

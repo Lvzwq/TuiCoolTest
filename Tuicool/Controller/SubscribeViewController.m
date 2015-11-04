@@ -8,7 +8,6 @@
 
 #import "SubscribeViewController.h"
 #import "AFNetworking.h"
-#import "Constants.h"
 #import "ItemTableViewController.h"
 
 @interface SubscribeViewController()<UITableViewDataSource, UITableViewDelegate>

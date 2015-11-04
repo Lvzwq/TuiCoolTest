@@ -7,7 +7,6 @@
 //
 
 #import "DetailArticleView.h"
-#import "Constants.h"
 #import "UILabel+FlexibleSize.h"
 #import "TCImageView.h"
 @interface DetailArticleView()<UIWebViewDelegate>
