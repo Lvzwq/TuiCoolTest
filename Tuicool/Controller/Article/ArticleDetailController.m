@@ -17,7 +17,6 @@
 
 @property(nonatomic, strong) FlexibleIndicatorView *indicatorView;
 
-
 @end
 
 @implementation ArticleDetailController
@@ -25,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"进入到viewDidLoad");
+    NSLog(@"进入到viewDidLoad, %@", [self class]);
     self.view.backgroundColor = [UIColor whiteColor];
     self.detailArticle = [[DetailArticleView alloc] initWithFrame:CGRectMake(0, 20, DeviceWidth, DeviceHeight - 20)];
     self.detailArticle.vc = self;

@@ -50,7 +50,9 @@
     NSDictionary *dict = [self.listData objectAtIndex:indexPath.row];
     
     cell.title.text = [dict objectForKey:@"name"];
+    
     [cell.thumbnail sd_setImageWithURL:[dict objectForKey:@"image"] placeholderImage:[UIImage imageNamed:@"placeholder_icon"]];
+    
     return cell;
 }
 

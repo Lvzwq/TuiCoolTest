@@ -35,14 +35,6 @@
 		AB38341F1BE9D63000026216 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834171BE9D63000026216 /* FMDatabasePool.m */; };
 		AB3834201BE9D63000026216 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834191BE9D63000026216 /* FMDatabaseQueue.m */; };
 		AB3834211BE9D63000026216 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38341C1BE9D63000026216 /* FMResultSet.m */; };
-		AB3834491BE9DA0800026216 /* ArticleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834251BE9DA0800026216 /* ArticleDetailController.m */; };
-		AB38344A1BE9DA0800026216 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834271BE9DA0800026216 /* ArticleViewController.m */; };
-		AB38344B1BE9DA0800026216 /* BaseArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834291BE9DA0800026216 /* BaseArticleController.m */; };
-		AB38344C1BE9DA0800026216 /* ItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38342B1BE9DA0800026216 /* ItemTableViewController.m */; };
-		AB38344D1BE9DA0800026216 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38342D1BE9DA0800026216 /* SettingsViewController.m */; };
-		AB38344E1BE9DA0800026216 /* SiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38342F1BE9DA0800026216 /* SiteViewController.m */; };
-		AB38344F1BE9DA0800026216 /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834311BE9DA0800026216 /* SubscribeViewController.m */; };
-		AB3834501BE9DA0800026216 /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834331BE9DA0800026216 /* ThemeViewController.m */; };
 		AB3834511BE9DA0800026216 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834361BE9DA0800026216 /* ArticleModel.m */; };
 		AB3834521BE9DA0800026216 /* TCNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834381BE9DA0800026216 /* TCNewsModel.m */; };
 		AB3834531BE9DA0800026216 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = AB38343B1BE9DA0800026216 /* style.css */; };
@@ -54,6 +46,14 @@
 		AB3834591BE9DA0800026216 /* TCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834481BE9DA0800026216 /* TCImageView.m */; };
 		AB38345F1BE9DA2400026216 /* UILabel+FlexibleSize.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38345C1BE9DA2400026216 /* UILabel+FlexibleSize.m */; };
 		AB3834601BE9DA2400026216 /* UITableViewCell+FlexibleSize.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38345E1BE9DA2400026216 /* UITableViewCell+FlexibleSize.m */; };
+		AB3834771BEA3EC500026216 /* ArticleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834641BEA3EC500026216 /* ArticleDetailController.m */; };
+		AB3834781BEA3EC500026216 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834661BEA3EC500026216 /* ArticleViewController.m */; };
+		AB3834791BEA3EC500026216 /* BaseArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834691BEA3EC500026216 /* BaseArticleController.m */; };
+		AB38347A1BEA3EC500026216 /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38346B1BEA3EC500026216 /* SubscribeViewController.m */; };
+		AB38347B1BEA3EC500026216 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB38346E1BEA3EC500026216 /* SettingsViewController.m */; };
+		AB38347C1BEA3EC500026216 /* ItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834711BEA3EC500026216 /* ItemTableViewController.m */; };
+		AB38347D1BEA3EC500026216 /* SiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834731BEA3EC500026216 /* SiteViewController.m */; };
+		AB38347E1BEA3EC500026216 /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3834761BEA3EC500026216 /* ThemeViewController.m */; };
 		AB640DC91BDF4B35003BAFD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DC81BDF4B35003BAFD1 /* main.m */; };
 		AB640DCC1BDF4B35003BAFD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB640DCB1BDF4B35003BAFD1 /* AppDelegate.m */; };
 		AB640DD51BDF4B35003BAFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB640DD31BDF4B35003BAFD1 /* Main.storyboard */; };
@@ -174,22 +174,6 @@
 		AB38341B1BE9D63000026216 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		AB38341C1BE9D63000026216 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		AB3834221BE9D6A400026216 /* Tuicool_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tuicool_Prefix.pch; sourceTree = "<group>"; };
-		AB3834241BE9DA0800026216 /* ArticleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailController.h; sourceTree = "<group>"; };
-		AB3834251BE9DA0800026216 /* ArticleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailController.m; sourceTree = "<group>"; };
-		AB3834261BE9DA0800026216 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
-		AB3834271BE9DA0800026216 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
-		AB3834281BE9DA0800026216 /* BaseArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseArticleController.h; sourceTree = "<group>"; };
-		AB3834291BE9DA0800026216 /* BaseArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseArticleController.m; sourceTree = "<group>"; };
-		AB38342A1BE9DA0800026216 /* ItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewController.h; sourceTree = "<group>"; };
-		AB38342B1BE9DA0800026216 /* ItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewController.m; sourceTree = "<group>"; };
-		AB38342C1BE9DA0800026216 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		AB38342D1BE9DA0800026216 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		AB38342E1BE9DA0800026216 /* SiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteViewController.h; sourceTree = "<group>"; };
-		AB38342F1BE9DA0800026216 /* SiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteViewController.m; sourceTree = "<group>"; };
-		AB3834301BE9DA0800026216 /* SubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewController.h; sourceTree = "<group>"; };
-		AB3834311BE9DA0800026216 /* SubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewController.m; sourceTree = "<group>"; };
-		AB3834321BE9DA0800026216 /* ThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeViewController.h; sourceTree = "<group>"; };
-		AB3834331BE9DA0800026216 /* ThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeViewController.m; sourceTree = "<group>"; };
 		AB3834351BE9DA0800026216 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
 		AB3834361BE9DA0800026216 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
 		AB3834371BE9DA0800026216 /* TCNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNewsModel.h; sourceTree = "<group>"; };
@@ -211,6 +195,22 @@
 		AB38345C1BE9DA2400026216 /* UILabel+FlexibleSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FlexibleSize.m"; sourceTree = "<group>"; };
 		AB38345D1BE9DA2400026216 /* UITableViewCell+FlexibleSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FlexibleSize.h"; sourceTree = "<group>"; };
 		AB38345E1BE9DA2400026216 /* UITableViewCell+FlexibleSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FlexibleSize.m"; sourceTree = "<group>"; };
+		AB3834631BEA3EC500026216 /* ArticleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailController.h; sourceTree = "<group>"; };
+		AB3834641BEA3EC500026216 /* ArticleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailController.m; sourceTree = "<group>"; };
+		AB3834651BEA3EC500026216 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		AB3834661BEA3EC500026216 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		AB3834681BEA3EC500026216 /* BaseArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseArticleController.h; sourceTree = "<group>"; };
+		AB3834691BEA3EC500026216 /* BaseArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseArticleController.m; sourceTree = "<group>"; };
+		AB38346A1BEA3EC500026216 /* SubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewController.h; sourceTree = "<group>"; };
+		AB38346B1BEA3EC500026216 /* SubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewController.m; sourceTree = "<group>"; };
+		AB38346D1BEA3EC500026216 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AB38346E1BEA3EC500026216 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		AB3834701BEA3EC500026216 /* ItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewController.h; sourceTree = "<group>"; };
+		AB3834711BEA3EC500026216 /* ItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewController.m; sourceTree = "<group>"; };
+		AB3834721BEA3EC500026216 /* SiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteViewController.h; sourceTree = "<group>"; };
+		AB3834731BEA3EC500026216 /* SiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteViewController.m; sourceTree = "<group>"; };
+		AB3834751BEA3EC500026216 /* ThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeViewController.h; sourceTree = "<group>"; };
+		AB3834761BEA3EC500026216 /* ThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeViewController.m; sourceTree = "<group>"; };
 		AB640DC41BDF4B35003BAFD1 /* Tuicool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuicool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB640DC81BDF4B35003BAFD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB640DCA1BDF4B35003BAFD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -418,29 +418,6 @@
 			path = Framework/fmdb;
 			sourceTree = "<group>";
 		};
-		AB3834231BE9DA0800026216 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AB3834241BE9DA0800026216 /* ArticleDetailController.h */,
-				AB3834251BE9DA0800026216 /* ArticleDetailController.m */,
-				AB3834261BE9DA0800026216 /* ArticleViewController.h */,
-				AB3834271BE9DA0800026216 /* ArticleViewController.m */,
-				AB3834281BE9DA0800026216 /* BaseArticleController.h */,
-				AB3834291BE9DA0800026216 /* BaseArticleController.m */,
-				AB38342A1BE9DA0800026216 /* ItemTableViewController.h */,
-				AB38342B1BE9DA0800026216 /* ItemTableViewController.m */,
-				AB38342C1BE9DA0800026216 /* SettingsViewController.h */,
-				AB38342D1BE9DA0800026216 /* SettingsViewController.m */,
-				AB38342E1BE9DA0800026216 /* SiteViewController.h */,
-				AB38342F1BE9DA0800026216 /* SiteViewController.m */,
-				AB3834301BE9DA0800026216 /* SubscribeViewController.h */,
-				AB3834311BE9DA0800026216 /* SubscribeViewController.m */,
-				AB3834321BE9DA0800026216 /* ThemeViewController.h */,
-				AB3834331BE9DA0800026216 /* ThemeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		AB3834341BE9DA0800026216 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +475,69 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		AB3834611BEA3EC500026216 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB3834621BEA3EC500026216 /* Article */,
+				AB3834671BEA3EC500026216 /* Common */,
+				AB38346C1BEA3EC500026216 /* Setting */,
+				AB38346F1BEA3EC500026216 /* Site */,
+				AB3834741BEA3EC500026216 /* Theme */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB3834621BEA3EC500026216 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				AB3834631BEA3EC500026216 /* ArticleDetailController.h */,
+				AB3834641BEA3EC500026216 /* ArticleDetailController.m */,
+				AB3834651BEA3EC500026216 /* ArticleViewController.h */,
+				AB3834661BEA3EC500026216 /* ArticleViewController.m */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		AB3834671BEA3EC500026216 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AB3834681BEA3EC500026216 /* BaseArticleController.h */,
+				AB3834691BEA3EC500026216 /* BaseArticleController.m */,
+				AB38346A1BEA3EC500026216 /* SubscribeViewController.h */,
+				AB38346B1BEA3EC500026216 /* SubscribeViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AB38346C1BEA3EC500026216 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				AB38346D1BEA3EC500026216 /* SettingsViewController.h */,
+				AB38346E1BEA3EC500026216 /* SettingsViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		AB38346F1BEA3EC500026216 /* Site */ = {
+			isa = PBXGroup;
+			children = (
+				AB3834701BEA3EC500026216 /* ItemTableViewController.h */,
+				AB3834711BEA3EC500026216 /* ItemTableViewController.m */,
+				AB3834721BEA3EC500026216 /* SiteViewController.h */,
+				AB3834731BEA3EC500026216 /* SiteViewController.m */,
+			);
+			path = Site;
+			sourceTree = "<group>";
+		};
+		AB3834741BEA3EC500026216 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AB3834751BEA3EC500026216 /* ThemeViewController.h */,
+				AB3834761BEA3EC500026216 /* ThemeViewController.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		AB640DBB1BDF4B35003BAFD1 = {
 			isa = PBXGroup;
 			children = (
@@ -523,8 +563,8 @@
 		AB640DC61BDF4B35003BAFD1 /* Tuicool */ = {
 			isa = PBXGroup;
 			children = (
+				AB3834611BEA3EC500026216 /* Controller */,
 				AB38345A1BE9DA2400026216 /* Category */,
-				AB3834231BE9DA0800026216 /* Controller */,
 				AB3834341BE9DA0800026216 /* Model */,
 				AB3834391BE9DA0800026216 /* Resources */,
 				AB38343C1BE9DA0800026216 /* View */,
@@ -952,31 +992,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDEF7641BE479F30059965B /* UIRefreshControl+AFNetworking.m in Sources */,
+				AB3834771BEA3EC500026216 /* ArticleDetailController.m in Sources */,
 				ABDEF7451BE479E70059965B /* MJRefreshStateHeader.m in Sources */,
 				ABDEF7481BE479E70059965B /* UIScrollView+MJExtension.m in Sources */,
-				AB38344E1BE9DA0800026216 /* SiteViewController.m in Sources */,
 				ABDEF7D41BE74EC40059965B /* SDWebImageDownloaderOperation.m in Sources */,
+				AB38347A1BEA3EC500026216 /* SubscribeViewController.m in Sources */,
 				ABDEF7DD1BE74EC40059965B /* UIView+WebCacheOperation.m in Sources */,
-				AB38344A1BE9DA0800026216 /* ArticleViewController.m in Sources */,
 				ABDEF7D71BE74EC40059965B /* UIButton+WebCache.m in Sources */,
 				ABDEF7041BE479D90059965B /* AFHTTPSessionManager.m in Sources */,
 				ABDEF73F1BE479E70059965B /* MJRefreshAutoStateFooter.m in Sources */,
 				ABDEF7621BE479F30059965B /* UIImageView+AFNetworking.m in Sources */,
 				ABDEF7D11BE74EC40059965B /* SDWebImageCompat.m in Sources */,
 				ABDEF7D31BE74EC40059965B /* SDWebImageDownloader.m in Sources */,
+				AB38347B1BEA3EC500026216 /* SettingsViewController.m in Sources */,
 				ABDEF7CF1BE74EC40059965B /* NSData+ImageContentType.m in Sources */,
+				AB3834791BEA3EC500026216 /* BaseArticleController.m in Sources */,
 				ABDEF7421BE479E70059965B /* MJRefreshBackStateFooter.m in Sources */,
 				ABDEF7381BE479E70059965B /* MJRefreshAutoFooter.m in Sources */,
 				ABDEF73C1BE479E70059965B /* MJRefreshHeader.m in Sources */,
 				ABDEF73D1BE479E70059965B /* MJRefreshAutoGifFooter.m in Sources */,
 				ABDEF7DB1BE74EC40059965B /* UIImageView+HighlightedWebCache.m in Sources */,
 				AB3834511BE9DA0800026216 /* ArticleModel.m in Sources */,
+				AB38347E1BEA3EC500026216 /* ThemeViewController.m in Sources */,
 				ABDEF75E1BE479F30059965B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				AB3834521BE9DA0800026216 /* TCNewsModel.m in Sources */,
 				ABDEF7051BE479D90059965B /* AFNetworkReachabilityManager.m in Sources */,
 				AB38345F1BE9DA2400026216 /* UILabel+FlexibleSize.m in Sources */,
 				ABDEF75F1BE479F30059965B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				ABDEF7CE1BE74EC40059965B /* MKAnnotationView+WebCache.m in Sources */,
+				AB38347D1BEA3EC500026216 /* SiteViewController.m in Sources */,
 				ABDEF7631BE479F30059965B /* UIProgressView+AFNetworking.m in Sources */,
 				ABDEF7D21BE74EC40059965B /* SDWebImageDecoder.m in Sources */,
 				ABDEF7D51BE74EC40059965B /* SDWebImageManager.m in Sources */,
@@ -986,11 +1030,9 @@
 				ABDEF7081BE479D90059965B /* AFURLRequestSerialization.m in Sources */,
 				ABDEF7071BE479D90059965B /* AFURLConnectionOperation.m in Sources */,
 				AB3834591BE9DA0800026216 /* TCImageView.m in Sources */,
-				AB3834491BE9DA0800026216 /* ArticleDetailController.m in Sources */,
 				ABDEF70A1BE479D90059965B /* AFURLSessionManager.m in Sources */,
 				ABDEF7651BE479F30059965B /* UIWebView+AFNetworking.m in Sources */,
 				AB3834201BE9D63000026216 /* FMDatabaseQueue.m in Sources */,
-				AB38344C1BE9DA0800026216 /* ItemTableViewController.m in Sources */,
 				AB640DCC1BDF4B35003BAFD1 /* AppDelegate.m in Sources */,
 				AB38341E1BE9D63000026216 /* FMDatabaseAdditions.m in Sources */,
 				ABDEF7401BE479E70059965B /* MJRefreshBackGifFooter.m in Sources */,
@@ -999,6 +1041,7 @@
 				AB3834541BE9DA0800026216 /* ArticleCell.m in Sources */,
 				AB3834551BE9DA0800026216 /* DetailArticleView.m in Sources */,
 				ABDEF73B1BE479E70059965B /* MJRefreshFooter.m in Sources */,
+				AB3834781BEA3EC500026216 /* ArticleViewController.m in Sources */,
 				ABDEF7DC1BE74EC40059965B /* UIImageView+WebCache.m in Sources */,
 				ABDEF73E1BE479E70059965B /* MJRefreshAutoNormalFooter.m in Sources */,
 				ABDEF7391BE479E70059965B /* MJRefreshBackFooter.m in Sources */,
@@ -1009,14 +1052,10 @@
 				AB3834601BE9DA2400026216 /* UITableViewCell+FlexibleSize.m in Sources */,
 				ABDEF7431BE479E70059965B /* MJRefreshGifHeader.m in Sources */,
 				ABDEF7411BE479E70059965B /* MJRefreshBackNormalFooter.m in Sources */,
-				AB38344D1BE9DA0800026216 /* SettingsViewController.m in Sources */,
-				AB3834501BE9DA0800026216 /* ThemeViewController.m in Sources */,
 				ABDEF74A1BE479E70059965B /* UIView+MJExtension.m in Sources */,
-				AB38344B1BE9DA0800026216 /* BaseArticleController.m in Sources */,
 				ABDEF7491BE479E70059965B /* UIScrollView+MJRefresh.m in Sources */,
 				AB3834581BE9DA0800026216 /* SitesViewCell.m in Sources */,
 				ABDEF7D91BE74EC40059965B /* UIImage+MultiFormat.m in Sources */,
-				AB38344F1BE9DA0800026216 /* SubscribeViewController.m in Sources */,
 				AB3834211BE9D63000026216 /* FMResultSet.m in Sources */,
 				AB640DC91BDF4B35003BAFD1 /* main.m in Sources */,
 				ABDEF7061BE479D90059965B /* AFSecurityPolicy.m in Sources */,
@@ -1024,6 +1063,7 @@
 				ABDEF7D61BE74EC40059965B /* SDWebImagePrefetcher.m in Sources */,
 				ABDEF73A1BE479E70059965B /* MJRefreshComponent.m in Sources */,
 				ABDEF7031BE479D90059965B /* AFHTTPRequestOperationManager.m in Sources */,
+				AB38347C1BEA3EC500026216 /* ItemTableViewController.m in Sources */,
 				ABDEF7091BE479D90059965B /* AFURLResponseSerialization.m in Sources */,
 				ABDEF7D01BE74EC40059965B /* SDImageCache.m in Sources */,
 				AB38341F1BE9D63000026216 /* FMDatabasePool.m in Sources */,

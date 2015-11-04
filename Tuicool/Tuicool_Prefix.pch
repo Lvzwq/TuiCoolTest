@@ -6,13 +6,27 @@
 //  Copyright © 2015年 zwenqiang. All rights reserved.
 //
 
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //常用变量
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
 #define StatusBarHeight (IOS7==YES ? 0 : 20)
 #define BackHeight      (IOS7==YES ? 0 : 15)
-
 #define fNavBarHeigth (IOS7==YES ? 64 : 44)
-
 #define DeviceWidth  ([UIScreen mainScreen].bounds.size.width)
 #define DeviceHeight ([UIScreen mainScreen].bounds.size.height-StatusBarHeight)
+#define DefaultColor [UIColor colorWithRed:0.0f green:205/255.0f blue:144/255.0f alpha:1.0f]
+
+
+
+#endif
+

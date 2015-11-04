@@ -30,9 +30,9 @@
     UINavigationBar *navBar = [UINavigationBar appearance];
     //设置导航栏标题颜色
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    UIColor *barColor = [UIColor colorWithRed:0.0f green:205/255.0f blue:144/255.0f alpha:1.0f];
+    
     //设置导航栏背景色
-    [navBar setBarTintColor:barColor];
+    [navBar setBarTintColor:DefaultColor];
     navBar.tintColor = [UIColor whiteColor];//设置导航栏返回按钮颜色
     
     

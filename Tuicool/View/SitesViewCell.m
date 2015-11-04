@@ -17,6 +17,7 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        //设置缩略图
         self.thumbnail = [[UIImageView alloc] init];
         self.thumbnail.frame = CGRectMake(10, 7, 30, 30);
         CALayer *layer = self.thumbnail.layer;
@@ -43,7 +44,7 @@
         NSLog(@"width = %f, dw = %f", self.frame.size.width, DeviceWidth);
         self.rightView.frame = CGRectMake(DeviceWidth - 40, 7, 30, 30);
         NSArray *subViews = self.rightView.subviews;
-        NSLog(@"subViews = %@", subViews);
+        
         UILabel *label = nil;
         if ([subViews count] == 0) {
             label = [[UILabel alloc] init];
