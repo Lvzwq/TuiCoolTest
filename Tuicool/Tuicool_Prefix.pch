@@ -18,7 +18,8 @@
 #import <Foundation/Foundation.h>
 
 //常用变量
-#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IOS7 (IOS_VERSION >= 7.0 ? YES : NO)
 #define StatusBarHeight (IOS7==YES ? 0 : 20)
 #define BackHeight      (IOS7==YES ? 0 : 15)
 #define fNavBarHeigth (IOS7==YES ? 64 : 44)
@@ -26,6 +27,7 @@
 #define DeviceHeight ([UIScreen mainScreen].bounds.size.height-StatusBarHeight)
 #define DefaultColor [UIColor colorWithRed:0.0f green:205/255.0f blue:144/255.0f alpha:1.0f]
 
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
 
 
 #endif

@@ -29,10 +29,11 @@
     if (self) {
         self.avatar = [[UIImageView alloc] init];
         self.avatar.frame = CGRectMake(20, 10, 50, 50);
+        self.avatar.image = [UIImage imageNamed:@"user_default"];
         [self addSubview:self.avatar];
         
         self.nickName = [[UILabel alloc] init];
-        self.nickName.frame = CGRectMake(CGRectGetMaxX(self.avatar.frame) + 10, 10, 120, 50);
+        self.nickName.frame = CGRectMake(CGRectGetMaxX(self.avatar.frame) + 20, 10, 200, 50);
         self.nickName.text = @"点击登录";
         self.nickName.numberOfLines = 1;
         self.nickName.font = [UIFont systemFontOfSize:16.0f];

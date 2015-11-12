@@ -8,6 +8,9 @@
 
 #import "SettingsViewController.h"
 #import "SettingLoginCell.h"
+#import "StorageService.h"
+#import "LoginViewController.h"
+#import "UIImageView+WebCache.h"
 
 
 
@@ -24,14 +27,12 @@
     
     
     self.listView = [[UITableView alloc] init];
-    CGFloat tableHeight = DeviceHeight - 64 - 49;
-    self.listView.frame = CGRectMake(0, 64, DeviceWidth, tableHeight);
+    CGFloat tableHeight = DeviceHeight - 49;
+    self.listView.frame = CGRectMake(0, 0, DeviceWidth, tableHeight);
     self.listView.dataSource = self;
     self.listView.delegate = self;
     [self.view addSubview: self.listView];
-    
-    [self addNavgationBar:@"我的"];
-    
+    self.navigationItem.title = @"我的";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,28 +41,6 @@
 }
 
 
-//自定义导航栏
-- (void)addNavgationBar: (NSString *)title{
-    //创建一个导航栏
-    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, DeviceWidth, 64)];
-    UIColor *color = [UIColor colorWithRed:0.0f green:205/255.0f blue:144/255.0f alpha:1.0f];
-    
-    //设置导航栏标题属性
-    NSDictionary *navTitleArr = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 [UIFont systemFontOfSize:18.0f], NSFontAttributeName,
-                                 [UIColor whiteColor], NSForegroundColorAttributeName,
-                                 nil];
-    [navBar setTitleTextAttributes:navTitleArr];
-    navBar.backgroundColor =  color;
-    //创建一个导航栏集合
-    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle: title];
-    
-    //把导航栏集合添加到导航栏中，设置动画关闭
-    [navBar pushNavigationItem:navItem animated:NO];
-    
-    //将标题栏中的内容全部添加到主视图当中
-    [self.view addSubview:navBar];
-}
 
 
 
@@ -87,9 +66,15 @@
         if (cell == nil) {
             cell = [[SettingLoginCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentify];
         }
+        StorageService *service = [StorageService shareInstance];
+        //已经登录
+        if ([service hasLogin]) {
+            AccountModel *user = [service getUserInfo];
+            NSLog(@"user = %@", user);
+            cell.nickName.text = user.name;
+            [cell.avatar sd_setImageWithURL:[NSURL URLWithString:user.profile] placeholderImage:[UIImage imageNamed:@"user_default"]];
+        }
         return cell;
-        
-        
     }else if (indexPath.section == 1){
         NSArray *sectionTwo = [self.setting objectAtIndex:0];
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
@@ -133,6 +118,23 @@
         return 42;
     }
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        StorageService *service = [[StorageService alloc] init];
+        if ([service hasLogin]) {
+            
+        }else{
+            LoginViewController *loginController = [[LoginViewController alloc] init];
+            loginController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:loginController animated:YES];
+        }
+    }else{
+        
+    }
+}
+
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

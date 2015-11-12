@@ -10,8 +10,9 @@
 #import "ArticleCell.h"
 #import "TCNewsModel.h"
 #import "MJRefresh.h"
-#import "AFNetworking.h"
 #import "ArticleDetailController.h"
+#import "StorageService.h"
+#import "RequestManager.h"
 
 //获取缓存图片的路径
 #define CacheImagePath(url) [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:[url lastPathComponent]]
@@ -57,7 +58,7 @@
     self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView.header beginRefreshing];
+    [self loadDefault];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +69,7 @@
     [self.operations removeAllObjects];
     // 移除所有的图片缓存
     [self.images removeAllObjects];
+    
 }
 
 - (NSOperationQueue *)queue
@@ -94,14 +96,31 @@
     return _images;
 }
 
+- (void)loadDefault{
+    NSInteger cid = [[self.parameters objectForKey: @"cid"] integerValue];
+    NSLog(@"cid = %i", cid);
+    if (!cid) {
+        cid = 0;
+    }
+    StorageService *service = [StorageService shareInstance];
+    NSArray *listModels = [service getNewsModelsById:cid];
+    NSLog(@"数据库中listModel = %@", listModels);
+    if ([listModels count] == 0) {
+        [self loadData];
+    }else{
+        self.listData = [NSMutableArray arrayWithArray:listModels];
+    }
+}
 
+#pragma mark -上拉刷新获取数据
 - (void) loadData{
     [self loadDataWithType:1 withParameter:self.parameters];
     [self.tableView.header endRefreshing];
 }
 
+#pragma mark - 下拉加载更多
 - (void)loadMoreData{
-    TCNewsModel *model = [TCNewsModel newsModelWithDict:[self.listData lastObject]];
+    TCNewsModel *model = [self.listData lastObject];
     NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:self.parameters];
     [param setObject:@"pn" forKey:[[NSNumber alloc] initWithInt:self.pn + 1]];
     [param setObject:@"last_time" forKey:model.uts];
@@ -111,51 +130,32 @@
     [self.tableView.footer endRefreshing];
 }
 
-- (void)loadDataWithType:(int)type withParameter: (NSDictionary *)parameters{
-    //判断网络状态
-    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        NSLog(@"%ld",(long)status);
-        switch (status) {
-            case 1:
-            case 2:
-                //网络状态良好
-                NSLog(@"当前网络状态良好");
-                break;
-            default:
-                NSLog(@"网络出现问题");
-                
-                break;
+- (void)loadDataWithType:(int)type withParameter: (NSDictionary *) parameter{
+    RequestManager *requestManager = [RequestManager sharedRequestManager];
+    [requestManager beforeRequest];
+    
+    [requestManager defaultHTTPHeader];
+    [requestManager requestJsonDataWithPath:self.baseUrl withParams:parameter autoShowError:YES withMethodType:GET andBlock:^(id responseObject, NSError *error) {
+        //数据正常
+        if(responseObject){
+            NSDictionary *resp = (NSDictionary *)responseObject;
+            NSArray *articles = (NSMutableArray *)[resp objectForKey:@"articles"];
+            NSArray *listModels = [TCNewsModel arrayModels:articles];
+            if (type == 1) {
+                NSInteger cid = [[parameter objectForKey: @"cid"] integerValue];
+                StorageService *service = [StorageService shareInstance];
+                [service deleteNewsModelsById:cid];
+                [service saveNewsModelWithArray:listModels withCategoryId: cid];
+                self.listData = [NSMutableArray arrayWithArray: listModels];
+            }else if (type == 2){
+                [self.listData addObjectsFromArray:listModels];
+                NSLog(@"当前加载了count = %lud", (unsigned long)self.listData.count);
+            }
+            [self.tableView reloadData];
         }
     }];
-    [mgr startMonitoring];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    //获取设备的User-Agent
-    //NSString *userAgent = [manager.requestSerializer valueForHTTPHeaderField:@"User-Agent"];
-    
-    NSString *userAgent = [NSString stringWithFormat:@"iOS/%@", [[UIDevice currentDevice] name]];
-    userAgent = [userAgent stringByAppendingPathComponent:@"2.13.1"];
-    NSLog(@"user-agent = %@", userAgent);
-    
-    [manager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
-    [manager.requestSerializer setValue:@"Basic MC4wLjAuMDp0dWljb29s" forHTTPHeaderField:@"Authorization"];
-    
-    [manager GET:self.baseUrl parameters: self.parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *resp = (NSDictionary *)responseObject;
-        NSArray *articles = (NSMutableArray *)[resp objectForKey:@"articles"];
-        
-        if (type == 1) {
-            self.listData = [NSMutableArray arrayWithArray:articles];
-        }else if (type == 2){
-            [self.listData addObjectsFromArray:articles];
-            NSLog(@"count = %lud", (unsigned long)self.listData.count);
-        }
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-
+    //[manager.requestSerializer setValue:@"Basic MC4wLjAuMDp0dWljb29s" forHTTPHeaderField:@"Authorization"];
 }
 
 #pragma mark -- UITableViewDatasource
@@ -168,7 +168,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TCNewsModel *tcNewsModel = [TCNewsModel newsModelWithDict:[self.listData objectAtIndex:indexPath.row]];
+    TCNewsModel *tcNewsModel = [self.listData objectAtIndex:indexPath.row];
     NSString *cellIdentify = [ArticleCell idForRow:tcNewsModel];
     ArticleCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
     if (cell == nil) {
@@ -196,7 +196,6 @@
                 NSBlockOperation *operation = self.operations[tcNewsModel.id];
                 NSLog(@"执行下载操作, operation = %@", operation);
                 if (nil == operation) {
-                    
                     //创建下载操作
                     __weak typeof(self) vc = self;
                     operation = [NSBlockOperation blockOperationWithBlock:^{
@@ -243,12 +242,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    TCNewsModel *model = [TCNewsModel newsModelWithDict:[self.listData objectAtIndex:indexPath.row]];
+    TCNewsModel *model = [self.listData objectAtIndex:indexPath.row];
     ArticleDetailController *detailViewController = [[ArticleDetailController alloc] init];
     detailViewController.newsModel = model;
     [self presentViewController:detailViewController animated:YES completion:^{
-        NSLog(@"hello world");
+        NSLog(@"返回的回调");
     }];
-    NSLog(@"你点击进入的model.text = %@", model.title);
+    
 }
 @end

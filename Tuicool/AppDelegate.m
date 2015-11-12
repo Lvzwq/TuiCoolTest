@@ -60,8 +60,9 @@
     SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
     UIImage *userImage = [UIImage imageNamed:@"User"];
     settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:userImage tag:3];
+    UINavigationController *settingRoot = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
     
-    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteRoot, themeRoot, settingsViewController, nil];
+    NSArray *controllers = [[NSArray alloc] initWithObjects:articleViewController, siteRoot, themeRoot, settingRoot, nil];
     myTabBarViewController.viewControllers = controllers;
     [self.window setRootViewController:myTabBarViewController];
     

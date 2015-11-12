@@ -84,7 +84,6 @@
     self.title.font = [UIFont systemFontOfSize:15.0f];
     if (![newsModel.img isEqualToString:@""]) {
         //如果文章含有缩略图
-        NSLog(@"有图片，链接为%@, 标题为: %@", newsModel.img, newsModel.title);
         self.imageIcon = [[UIImageView alloc] init];
         self.imageIcon.frame = CGRectMake(DeviceWidth - 90, 10, 80, 50);
         self.imageIcon.image = [UIImage imageNamed:@"myKing.jpg"];

@@ -207,7 +207,12 @@
                              target:nil
                              action:nil];
     
-    self.toolBar.tintColor = DefaultColor;
+    //self.toolBar.tintColor = DefaultColor;
+    item1.tintColor = DefaultColor;
+    item2.tintColor = DefaultColor;
+    item3.tintColor = DefaultColor;
+    item4.tintColor = DefaultColor;
+    item5.tintColor = DefaultColor;
     [self.toolBar setItems:[NSArray arrayWithObjects:item1, item, item2, item, item3, item, item4, item, item5, nil]];
     [self addSubview:self.toolBar];
 }

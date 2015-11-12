@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMResultSet.h"
 
 @interface TCNewsModel : NSObject
 /**
@@ -56,4 +57,8 @@
 + (instancetype)newsModelWithDict:(NSDictionary *)dict;
 
 + (NSArray *)propertyList;
+
++ (TCNewsModel *)modelWithResult:(FMResultSet *)result;
+
++ (NSMutableArray *)arrayModels:(NSArray *)arr;
 @end
